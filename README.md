@@ -7,3 +7,4 @@ By clicking the generate password button, users are presented with a series of p
 - Numbers
 - Special Characters
 <img src="./assets/pw-gen-ss.png">
+link: https://matty-bennett.github.io/password-generator/
