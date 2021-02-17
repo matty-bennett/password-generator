@@ -47,32 +47,32 @@ var generatePassword = function(promptLength, promptLowercase, promptUppercase, 
     };
   
   if (promptLowercase) {
-    userInput.push(lowLetters);
+    userInput.push(lowLetters); // push lowercase letters array into userInput array
     console.log(userInput);
   }
   if (promptUppercase) {
-    userInput.push(upLetters);
+    userInput.push(upLetters); // push uppercase letters array into userInput array
     console.log(userInput);
   }
   if (promptNumber) {
-    userInput.push(numbers);
+    userInput.push(numbers); // push numbers array into userInput array
     console.log(userInput);
   }
   if (promptSpecial) {
-    userInput.push(special);
+    userInput.push(special); // push specials array into userInput array
     console.log(userInput);
   }
 
-  var userInput2 = userInput.flat();
+  var userInput2 = userInput.flat(); // combine chosen arrays into one array
   console.log(userInput2);
 
-  for (let i = 0; i < promptLength; i++) {
-    output = userInput2[Math.floor(Math.random() * userInput2.length)];
+  for (let i = 0; i < promptLength; i++) { // loops as many times as chosen by user
+    output = output + userInput2[Math.floor(Math.random() * userInput2.length)].toString(); //randomizes the created array into output
   }
 
   console.log(output);
 
-  writePassword(output);
+  writePassword(output); // populates text area with output result
 };
 
 // Get references to the #generate element
